@@ -79,13 +79,29 @@
 <div id="map"></div>
 <script>
     const map = L.map('map').setView([30, 10], 2);
-    
+
+    // ── FORMAT DATE ──────────────────────────────────────────────
     function formatDate(dateStr) {
         const [year, month] = dateStr.split('-');
         const months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
         return months[parseInt(month) - 1] + ' ' + year;
     }
 
+    // ── ACHIEVEMENT PINS ─────────────────────────────────────────
+    let currentMarkers = [];
+
+    function showAchievements(role) {
+        currentMarkers.forEach(m => map.removeLayer(m));
+        currentMarkers = [];
+        role.achievements.forEach(a => {
+            const marker = L.marker([a.lat, a.lng])
+                .addTo(map)
+                .bindPopup(`<b>${a.label}</b><br><strong>${a.stat}</strong><br>${a.desc}`);
+            currentMarkers.push(marker);
+        });
+    }
+
+    // ── TIMELINE ─────────────────────────────────────────────────
     function buildTimeline() {
         const container = document.getElementById('timeline');
         const sorted = [...careerData.roles].sort((a, b) => b.start.localeCompare(a.start));
@@ -104,31 +120,32 @@
                     </div>
                 </div>
             `;
-            item.onclick = () => map.flyTo(role.center, role.zoom, { duration: 1.5 });
+            item.onclick = () => {
+                map.flyTo(role.center, role.zoom, { duration: 1.5 });
+                showAchievements(role);
+            };
             container.appendChild(item);
         });
     }
 
-buildTimeline();
+    buildTimeline();
 
+    // ── CHOROPLETH ───────────────────────────────────────────────
     fetch('https://raw.githubusercontent.com/datasets/geo-countries/master/data/countries.geojson')
-    .then(response => response.json())
-    .then(data => {
-        L.geoJSON(data, {
-            style: function(feature) {
-                const name = feature.properties.name;
-                const location = careerData.locations.find(l => l.name === name);
-                
-                if (!location) return { fillColor: '#e8e8e8', fillOpacity: 1, weight: 0.5, color: '#ccc' };
-                
-                if (location.tier === 'deployed')           return { fillColor: '#C8972A', fillOpacity: 0.8, weight: 1, color: '#E8B84B' };
-                if (location.tier === 'remote-deployment')  return { fillColor: '#C8972A', fillOpacity: 0.5, weight: 1, color: '#E8B84B' };
-                if (location.tier === 'remote-support')    return { fillColor: '#C8972A', fillOpacity: 0.2, weight: 1, color: '#E8B84B' };
-
-                return { fillColor: '#e8e8e8', fillOpacity: 1, weight: 0.5, color: '#ccc' };
-                            }
-        }).addTo(map);
-    });
+        .then(response => response.json())
+        .then(data => {
+            L.geoJSON(data, {
+                style: function(feature) {
+                    const name = feature.properties.name;
+                    const location = careerData.locations.find(l => l.name === name);
+                    if (!location) return { fillColor: '#e8e8e8', fillOpacity: 1, weight: 0.5, color: '#ccc' };
+                    if (location.tier === 'deployed')          return { fillColor: '#C8972A', fillOpacity: 0.8, weight: 1, color: '#E8B84B' };
+                    if (location.tier === 'remote-deployment') return { fillColor: '#C8972A', fillOpacity: 0.5, weight: 1, color: '#E8B84B' };
+                    if (location.tier === 'remote-support')    return { fillColor: '#C8972A', fillOpacity: 0.2, weight: 1, color: '#E8B84B' };
+                    return { fillColor: '#e8e8e8', fillOpacity: 1, weight: 0.5, color: '#ccc' };
+                }
+            }).addTo(map);
+        });
 </script>
 </body>
 
