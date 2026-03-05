@@ -80,25 +80,34 @@
 <script>
     const map = L.map('map').setView([30, 10], 2);
     
+    function formatDate(dateStr) {
+        const [year, month] = dateStr.split('-');
+        const months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+        return months[parseInt(month) - 1] + ' ' + year;
+    }
+
     function buildTimeline() {
-    const container = document.getElementById('timeline');
-    careerData.roles.forEach(role => {
-        const item = document.createElement('div');
-        item.className = 'timeline-item';
-        item.innerHTML = `
-        <div style="display:flex; align-items:center; gap:12px; padding:4px 0;">
-            <img src="${role.logo}" style="width:40px; height:40px; object-fit:contain; flex-shrink:0;">
-            <div>
-                <div class="timeline-date">${role.start} – ${role.end}</div>
-                <div class="timeline-title">${role.title}</div>
-                <div class="timeline-org">${role.org}</div>
-            </div>
-        </div>
-    `;
-        item.onclick = () => map.flyTo(role.center, role.zoom, { duration: 1.5 });
-        container.appendChild(item);
-    });
-}
+        const container = document.getElementById('timeline');
+        const sorted = [...careerData.roles].sort((a, b) => b.start.localeCompare(a.start));
+        sorted.forEach(role => {
+            const item = document.createElement('div');
+            item.className = 'timeline-item';
+            item.innerHTML = `
+                <div style="display:flex; align-items:center; gap:12px; padding:4px 0;">
+                    <div style="width:40px; height:40px; display:flex; align-items:center; justify-content:center; flex-shrink:0;">
+                        <img src="${role.logo}" style="max-width:40px; max-height:40px; object-fit:contain;">
+                    </div>
+                    <div>
+                        <div class="timeline-date">${formatDate(role.start)} – ${formatDate(role.end)}</div>
+                        <div class="timeline-title">${role.title}</div>
+                        <div class="timeline-org">${role.org}</div>
+                    </div>
+                </div>
+            `;
+            item.onclick = () => map.flyTo(role.center, role.zoom, { duration: 1.5 });
+            container.appendChild(item);
+        });
+    }
 
 buildTimeline();
 

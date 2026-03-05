@@ -119,28 +119,64 @@ ukRegions: [
         tier: "deployed",
         summary: "Emergency response at county level in the West Midlands.",
         achievements: [
+                        {
+                            label: "Volunteer Management",
+                            stat: "20 volunteers",
+                            desc: "Day-to-day management of emergency response volunteers across West Midlands and Warwickshire",
+                            lat: 52.3780,
+                            lng: -1.5834
+                        },
+                        {
+                            label: "Beast from the East",
+                            stat: "Extreme Weather",
+                            desc: "Operational lead for 2018 extreme weather response — supporting isolated vulnerable people and bottled water distribution",
+                            lat: 52.5030,
+                            lng: -2.0840
+                        },
+                        {
+                            label: "Service Development",
+                            stat: "Strategic",
+                            desc: "Created service development plan for programme growth and resilience",
+                            lat: 52.4068,
+                            lng: -1.5197
+                        },
+                    ]
+                },
     {
-        label: "Volunteer Management",
-        stat: "20 volunteers",
-        desc: "Day-to-day management of emergency response volunteers across West Midlands and Warwickshire",
-        lat: 52.3780,
-        lng: -1.5834
-    },
-    {
-        label: "Beast from the East",
-        stat: "Extreme Weather",
-        desc: "Operational lead for 2018 extreme weather response — supporting isolated vulnerable people and bottled water distribution",
-        lat: 52.5030,
-        lng: -2.0840
-    },
-    {
-        label: "Service Development",
-        stat: "Strategic",
-        desc: "Created service development plan for programme growth and resilience",
-        lat: 52.4068,
-        lng: -1.5197
-    }
-]
-    }
-]
+        id: "brc-sero-wm",
+        title: "Senior Emergency Response Officer",
+        org: "British Red Cross",
+        logo: "images/british_red_cross_logo.jpg",
+        center: [52.4068, -1.5197],
+        zoom: 7,
+        start: "2019-06",
+        end: "2021-02",
+        location: "west-midlands-area",
+        tier: "deployed",
+        summary: "Emergency response at county level in the West Midlands.",
+        achievements: [
+                        {
+                            label: "Volunteer Management",
+                            stat: "20 volunteers",
+                            desc: "Day-to-day management of emergency response volunteers across West Midlands and Warwickshire",
+                            lat: 52.3780,
+                            lng: -1.5834
+                        },
+                        {
+                            label: "Beast from the East",
+                            stat: "Extreme Weather",
+                            desc: "Operational lead for 2018 extreme weather response — supporting isolated vulnerable people and bottled water distribution",
+                            lat: 52.5030,
+                            lng: -2.0840
+                        },
+                        {
+                            label: "Service Development",
+                            stat: "Strategic",
+                            desc: "Created service development plan for programme growth and resilience",
+                            lat: 52.4068,
+                            lng: -1.5197
+                        }
+                    ]
+        }
+    ]
 };
