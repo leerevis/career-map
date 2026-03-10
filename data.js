@@ -149,7 +149,7 @@ const careerData = {
             id: "wateraid-wipo",
             title: "Water Industry Partnerships Officer",
             org: "WaterAid UK",
-            logo: "images/wateraid.png",
+            logo: "images/wateraid_logo.png",
             center: [52.4068, -1.5197],
             zoom: 7,
             start: "2015-08",
