@@ -196,37 +196,51 @@ const careerData = {
             ]
         }, // end role: wateraid-wipo
         // ── END ROLE ─────────────────────────────────────────────────────
-        // ── ROLE: British Red Cross - Emergency Response Officer ──
+        // ── ROLE: Society for the Environment - Insight & Engagement Officer ──
         {
             id: "socenv",
             title: "Insight & Engagement Officer",
             org: "Society for the Environment",
-            logo: "images\society_for_the_environment_logo.jpg",
+            logo: "images/society_for_the_environment_logo.jpg",
             center: [52.4068, -1.5197],
-            zoom: 7,
+            zoom: 8,
             start: "2016-06",
             end: "2017-06",
             location: "west-midlands-area",
             tier: "deployed",
-            summary: "Environmental Policy and Advocacy within the UK and Europe.",
+            summary: "Policy, advocacy and engagement role focused on environmental accreditation and evidence-based policy. Worked across national government, European institutions and professional networks to influence post-EU Exit environmental standards.",
             achievements: [
                 {
-                    label: "Advocacy",
-                    stat: "TBC",
-                    desc: "Researched and wrote envidence based environmental policy recommendations to the British Government following the UK vote to leave the European Union",
+                    label: "Government Inquiry Evidence",
+                    stat: "DEFRA Referenced",
+                    desc: "Produced white papers and evidence submissions to government inquiries, referenced in official reports by DEFRA and the Department for Science",
+                    lat: 51.4978,
+                    lng: -0.1301
+                },
+                {
+                    label: "Ministerial Engagement",
+                    stat: "National",
+                    desc: "Engaged with Ministers, Lords and senior Civil Servants to advocate for maintaining and strengthening EU environmental standards post-EU Exit",
                     lat: 51.4994,
                     lng: -0.1248
                 },
                 {
-                    label: "EU Policy Work",
+                    label: "EU Policy & Secretariat",
                     stat: "European",
                     desc: "Secretariat support and evidence-based environmental policy development for the European Network of Environmental Professionals",
                     lat: 50.8466,
                     lng: 4.3776
+                },
+                {
+                    label: "Global Professional Survey",
+                    stat: "Worldwide",
+                    desc: "Designed and delivered global survey of chartered environmental professionals to evidence the value of accreditation and capture post-EU Exit policy priorities. Responses received from across the world including significant engagement from Asia.",
+                    lat: 52.4068,
+                    lng: -1.5197
                 }
             ]
-        },
-        // ── END ROLE ──────────────────────────────────────────────
+        }, // end role: socenv
+        // ── END ROLE ─────────────────────────────────────────────────────
         // ── ROLE: British Red Cross - Emergency Response Officer ──
         {
             id: "brc-ero-wm",
