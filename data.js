@@ -144,6 +144,58 @@ const careerData = {
             ]
         }, // end role: essex-su-digital
         // ── END ROLE ─────────────────────────────────────────────────────
+        // ── ROLE: WaterAid - Water Industry Partnerships Officer ──
+        {
+            id: "wateraid-wipo",
+            title: "Water Industry Partnerships Officer",
+            org: "WaterAid UK",
+            logo: "images/wateraid.png",
+            center: [52.4068, -1.5197],
+            zoom: 7,
+            start: "2015-08",
+            end: "2016-04",
+            location: "central-england",
+            tier: "deployed",
+            summary: "Corporate partnership role working with three water companies across Central England, raising £1.6m while maintaining strong ROI on all fundraising activities. Required deep WASH technical knowledge to engage both engineering and non-technical corporate audiences — skills directly transferable to future humanitarian WASH assessments.",
+            achievements: [
+            {
+                label: "Partnership Fundraising",
+                stat: "£1.6m raised",
+                desc: "Generated £1.6m across three water company partnerships through marquee fundraising events and innovative schemes, including a long-term graduate sponsorship programme that linked development project progress with graduate career growth. Required translating complex WASH concepts to both technical engineering audiences and non-technical corporate volunteers.",
+                lat: 52.40493,
+                lng: -1.50623
+            },
+            {
+                label: "Volunteer Capacity Building",
+                stat: "Corporate",
+                desc: "Supported and developed corporate volunteers across partnership activities",
+                lat: 52.60261,
+                lng: -1.99968
+            },
+            {
+                label: "Partnership Management",
+                stat: "Multi-site",
+                desc: "Stakeholder management across all levels, budgeting and financial reconciliation across partnership activities",
+                lat: 52.34631,
+                lng: -0.19882
+            },
+            {
+                label: "Engagement Strategy",
+                stat: "Strategic",
+                desc: "Internal perception survey on volunteering and WASH awareness used to shape engagement strategy and future partnership development",
+                lat: 51.48559,
+                lng: -0.11861
+            },
+            {
+                label: "Technical Exchange",
+                stat: "Africa",
+                desc: "Facilitated technical knowledge exchange between UK water companies and water enterprises in developing countries (Mozambique TBC)",
+                lat: -18.6657,
+                lng: 35.5296
+            }
+            ]
+        }, // end role: wateraid-wipo
+        // ── END ROLE ─────────────────────────────────────────────────────
         // ── ROLE: British Red Cross - Emergency Response Officer ──
         {
             id: "socenv",
