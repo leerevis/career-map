@@ -106,12 +106,50 @@ const careerData = {
         }
     ],
     roles: [
+        // ── ROLE: University of Essex Students' Union - Digital Marketing ──
+        {
+            id: "essex-su-digital",
+            title: "Digital Marketing & Social Media Assistant",
+            org: "University of Essex Students' Union",
+            logo: "images/essex_su.png",
+            center: [51.8793, 0.9408],
+            zoom: 15,
+            start: "2013-09",
+            end: "2014-06",
+            location: "essex",
+            tier: "deployed",
+            summary: "Digital marketing and social media role covering all three Essex campuses. Developed data-driven audience targeting, student needs reporting and led brand transition.",
+            achievements: [
+                {
+                    label: "Analytics & Audience Targeting",
+                    stat: "Data-driven",
+                    desc: "Matched social analytics to event demographics to ensure inclusive, targeted messaging across all student segments",
+                    lat: 51.87717,
+                    lng: 0.94713
+                },
+                {
+                    label: "Brand Transition",
+                    stat: "Legacy",
+                    desc: "Led social media team through full rebranding, developing tone of voice still in use today",
+                    lat: 51.87626,
+                    lng: 0.94601
+                },
+                {
+                    label: "Social Listening Programme",
+                    stat: "Weekly",
+                    desc: "Designed weekly student needs reporting for senior management - early precursor to humanitarian needs assessment work",
+                    lat: 51.87749,
+                    lng: 0.94476
+                }
+            ]
+        }, // end role: essex-su-digital
+        // ── END ROLE ─────────────────────────────────────────────────────
         // ── ROLE: British Red Cross - Emergency Response Officer ──
         {
             id: "socenv",
             title: "Insight & Engagement Officer",
             org: "Society for the Environment",
-            logo: "mages\society_for_the_environment_logo.jpg",
+            logo: "images\society_for_the_environment_logo.jpg",
             center: [52.4068, -1.5197],
             zoom: 7,
             start: "2016-06",
