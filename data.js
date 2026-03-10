@@ -108,6 +108,37 @@ const careerData = {
     roles: [
         // ── ROLE: British Red Cross - Emergency Response Officer ──
         {
+            id: "socenv",
+            title: "Insight & Engagement Officer",
+            org: "Society for the Environment",
+            logo: "mages\society_for_the_environment_logo.jpg",
+            center: [52.4068, -1.5197],
+            zoom: 7,
+            start: "2016-06",
+            end: "2017-06",
+            location: "west-midlands-area",
+            tier: "deployed",
+            summary: "Environmental Policy and Advocacy within the UK and Europe.",
+            achievements: [
+                {
+                    label: "Advocacy",
+                    stat: "TBC",
+                    desc: "Researched and wrote envidence based environmental policy recommendations to the British Government following the UK vote to leave the European Union",
+                    lat: 51.4994,
+                    lng: -0.1248
+                },
+                {
+                    label: "EU Policy Work",
+                    stat: "European",
+                    desc: "Secretariat support and evidence-based environmental policy development for the European Network of Environmental Professionals",
+                    lat: 50.8466,
+                    lng: 4.3776
+                }
+            ]
+        },
+        // ── END ROLE ──────────────────────────────────────────────
+        // ── ROLE: British Red Cross - Emergency Response Officer ──
+        {
             id: "brc-ero-wm",
             title: "Emergency Response Officer",
             org: "British Red Cross",
